@@ -5,7 +5,7 @@ variables:
   # appname (the name of the limestone web app; e.g. app-limestone-dev)
 
   # Agent VM image name
-  vmImageName: 'windows-latest'
+  vmImageName: 'windows-2022'
   webHostDir: '$(System.DefaultWorkingDirectory)/FunctionApp1'  
 
 stages:
