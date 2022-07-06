@@ -36,6 +36,7 @@ stages:
               command: publish
               projects: ${{ variables.webHostDir }}/*.csproj
               arguments: --output $(Build.BinariesDirectory)\publish_output
+              publishWebProjects: false
               zipAfterPublish: true
               modifyOutputPath: false
           - task: AzureWebApp@1
