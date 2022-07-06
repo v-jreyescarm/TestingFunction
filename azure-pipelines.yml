@@ -16,14 +16,14 @@ stages:
         pool:
           vmimage: $(vmimagename)
         steps:
-          - task: NuGetAuthenticate@0
-          - task: NuGetToolInstaller@1
-          - task: NuGetCommand@2
-            inputs:
-              command: 'restore'
-              restoreSolution: '**/*.sln'
-              feedsToUse: 'select'
-              vstsFeed: '695454c5-2fc4-4ea5-8774-f593d5d93f39/55479e6f-d9a4-40f5-ab30-b013555bf1da'
+          #- task: NuGetAuthenticate@0
+          #- task: NuGetToolInstaller@1
+          #- task: NuGetCommand@2
+          #  inputs:
+          #    command: 'restore'
+          #    restoreSolution: '**/*.sln'
+          #    feedsToUse: 'select'
+          #    vstsFeed: '695454c5-2fc4-4ea5-8774-f593d5d93f39/55479e6f-d9a4-40f5-ab30-b013555bf1da'
           - task: dotnetcorecli@2
             displayName: 'dotnet build'
             inputs:
