@@ -30,6 +30,10 @@ stages:
               command: 'build'
               projects: ${{ variables.webHostDir }}/*.csproj    
               arguments: --configuration Debug
+          - task: PublishSymbols@2
+            inputs:
+              SearchPattern: '**/bin/**/*.pdb'
+              SymbolServerType: 'TeamServices'
           - task: DotNetCoreCLI@2
             displayName: 'Publish Namoluk'
             inputs:
